@@ -47,11 +47,11 @@ TeamPulse is a production-ready MERN stack application for managing weekly emplo
   </tr>
   <tr>
     <td align="center">
-      <img src="./screenshots/manager/projects-manager.png" alt="Projects" width="320" /><br />
+      <img src="./screenshots/manager/projects.png" alt="Projects" width="320" /><br />
       <b>Projects</b>
     </td>
     <td align="center">
-      <img src="./screenshots/manager/analytics-manager.png" alt="Analytics" width="320" /><br />
+      <img src="./screenshots/manager/analytics.png" alt="Analytics" width="320" /><br />
       <b>Analytics</b>
     </td>
     <td align="center">
