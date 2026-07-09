@@ -58,9 +58,13 @@ app.get('/', (req, res) => {
 
 // Mount Routes
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/auth', require('./routes/authRoutes'));
 app.use('/api/projects', require('./routes/projectRoutes'));
+app.use('/projects', require('./routes/projectRoutes'));
 app.use('/api/reports', require('./routes/reportRoutes'));
+app.use('/reports', require('./routes/reportRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
+app.use('/dashboard', require('./routes/dashboardRoutes'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
