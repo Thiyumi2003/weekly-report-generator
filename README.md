@@ -1,184 +1,171 @@
 # TeamPulse - Weekly Report Generator & Team Dashboard
 
-TeamPulse is a production-ready, feature-rich MERN stack application built for companies to organize and audit weekly reports submitted by employees. It provides team members with a clean dashboard to submit weekly progress logs and gives managers analytical dashboards, project management capabilities, and an AI report assistant powered by OpenAI.
+TeamPulse is a production-ready MERN stack application for managing weekly employee reports, team performance, and project progress. It includes role-based dashboards, report submission workflows, analytics, and an AI assistant.
 
----
+## Live Demo
 
-## 🌟 Key Features
+- Frontend: https://weekly-report-generator-olive.vercel.app/
+- Backend API: https://weekly-report-generator-fpxu.onrender.com/
 
-### 👤 Role-Based Authorization
-- **Managers**: Can access all team members' reports, search and filter logs, approve reports, CRUD projects, view Recharts analytics, and converse with the AI Assistant.
-- **Team Members**: Can create, edit, save draft, delete, and submit weekly reports for active projects. Access is securely restricted to their own reports.
+## Screenshots
 
-### 🔒 JWT Authentication & Security
-- Complete registration, login, profile view, and cookie-based/header-based session validation.
-- Secure password hashing using `bcryptjs`.
-- Custom middleware layers block unauthenticated queries and restrict manager endpoints.
-- High-fidelity validation on all input fields using `express-validator`.
+| Home View | Login View | Register View |
+|---|---|---|
+| ![Home View](screenshots/home.png) | ![Login View](screenshots/login.png) | ![Register View](screenshots/register.png) |
 
-### 📋 Interactive Report Builder
-- Team members can submit weekly summaries with dynamic, growing arrays of:
-  - Tasks Completed
-  - Tasks Planned (for next week)
-  - Impediments & Blockers
-- Includes auto-calculation of work hours and validation of the current week (e.g., `YYYY-WXX` format).
-- Automatically marks submissions submitted after the Sunday deadline as `Late`.
+| Manager Dashboard View | Team Member View |
+|---|---|
+| ![Manager Dashboard](screenshots/manager/manager.png) | ![Team Member View](screenshots/team%20memeber/team%20member.png) |
 
-### 📊 Manager Analytics Panel
-- Summary counts tracking Total Reports, Submitted logs, Pending drafts, and active Open Blockers.
-- Responsive charts designed with **Recharts**:
-  - **Bar Chart**: Tasks Completed vs. Planned.
-  - **Pie Chart**: Submission status distribution (Draft, Submitted, Late, Approved).
-  - **Doughnut Chart**: Worked hours division by Project.
-  - **Line Chart**: Report submission trend over weeks.
+## Features
 
-### 🤖 AI Team Assistant (Bonus)
-- Managers can submit natural-language questions to summarize team achievements or list blockers.
-- **Dual-Mode AI**: Uses OpenAI's chat completion API if configured with a key. If no key is set, it falls back to a smart local search query parser that scans the MongoDB collections directly, keeping the feature functional in demo runs.
+- Role-based access for managers and team members
+- Weekly report creation, editing, saving drafts, and submission
+- Manager analytics dashboards with charts
+- AI assistant for summary and blocker insights
+- Secure authentication with JWT and password hashing
 
----
+## Tech Stack
 
-## 🛠️ Technology Stack
+- Frontend: React, Vite, React Router, Tailwind CSS, Axios, Recharts
+- Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, bcryptjs
+- Dev tooling: concurrently
 
-- **Frontend**: React 19 (Vite), React Router DOM v7, Tailwind CSS v4, Axios, React Hook Form, React Icons, Recharts.
-- **Backend**: Node.js, Express.js, MongoDB Atlas (Mongoose), JWT, bcryptjs, express-validator, dotenv.
-- **Root tooling**: `concurrently` (coordinates running backend & frontend servers together).
+## 1. Installing Dependencies
 
----
+From the project root, install everything with:
 
-## 📁 Repository Structure
-
-```
-weekly-report-generator/ (Workspace Root)
-├── package.json (Root scripts for workspace setup)
-├── README.md
-├── backend/
-│   ├── config/ (db, openai)
-│   ├── controllers/ (auth, project, report, dashboard)
-│   ├── middleware/ (auth, error, validation)
-│   ├── models/ (User, Project, WeeklyReport)
-│   ├── routes/ (auth, project, report, dashboard)
-│   ├── validations/ (auth, project, report)
-│   ├── seed.js (Database seeding script)
-│   ├── server.js (Express server entry point)
-│   ├── .env.example
-│   └── package.json
-└── frontend/
-    ├── index.html
-    ├── vite.config.js
-    ├── package.json
-    └── src/
-        ├── components/ (Navbar, Sidebar, Button, Inputs, Modals, Loader, etc.)
-        ├── context/ (AuthContext)
-        ├── hooks/ (useAuth)
-        ├── layouts/ (DashboardLayout)
-        ├── pages/ (Home, Login, Register, Dashboard, MyReports, CreateReport, EditReport, Projects, ManagerDashboard, Analytics, Profile, AIAssistant, NotFound)
-        ├── services/ (api)
-        ├── App.jsx
-        ├── index.css
-        └── main.jsx
-```
-
----
-
-## 🚀 Installation & Local Run
-
-### 1. Prerequisites
-- [Node.js](https://nodejs.org/) (v18+ recommended)
-- [MongoDB](https://www.mongodb.com/) (local database server, or a MongoDB Atlas connection URI)
-
-### 2. Install Dependencies
-Open your shell at the workspace root directory and run the helper installer script:
 ```bash
 npm run install:all
 ```
-*This installs root dependencies (`concurrently`), backend packages (`mongoose`, `express`, `jsonwebtoken`), and frontend assets (`recharts`, `tailwindcss`).*
 
-### 3. Setup Environment Variables
-Configure the backend environmental parameters by copying the example template:
+This installs the root tools plus the backend and frontend packages.
+
+If you prefer to install them separately:
+
 ```bash
-cp backend/.env.example backend/.env
+npm install
+cd backend && npm install
+cd ../frontend && npm install
 ```
-Open `backend/.env` and update credentials if needed:
-- `MONGODB_URI`: set your MongoDB connection string (defaults to `mongodb://localhost:27017/teampulse`).
-- `JWT_SECRET`: change this to a secure random string.
-- `OPENAI_API_KEY`: set your OpenAI API developer key if you want real AI completions (leave blank for local demo mode).
 
-### 4. Seed the Database
-Seed the database collections with 1 Manager, 3 Team Members, 4 Projects, and 9 historical Weekly Reports across weeks:
-```bash
-npm run seed
-```
-*Console output will display confirmation of created records.*
+## 2. Running the Frontend
 
-### 5. Launch Development Servers
-Start both the backend API server (port 5000) and the frontend Vite web server (port 5173) concurrently:
+Start the Vite frontend:
+
 ```bash
+cd frontend
 npm run dev
 ```
-Open your browser and navigate to: **[http://localhost:5173](http://localhost:5173)**.
 
----
+Open:
 
-## 🎯 Demo Login Credentials
+```text
+http://localhost:5173
+```
 
-For evaluation or grading, click the "Demo Sign In" button on the login screen or quick-fill using:
-- **Manager Account**:
-  - Email: `manager@teampulse.com`
-  - Password: `password123`
-- **Team Member Account** (John Doe):
-  - Email: `john@teampulse.com`
-  - Password: `password123`
+## 3. Running the Backend
 
----
+Start the Express backend:
 
-## 🔌 API Documentation
+```bash
+cd backend
+npm run dev
+```
 
-All API endpoints are prefixed with `/api`. Authenticated routes expect a JWT token passed in the `Authorization` header as `Bearer <token>` or stored inside cookies.
+The API will run on:
 
-### 🔐 Authentication (`/api/auth`)
-- `POST /register`: Registers a new user (Manager or Team Member).
-- `POST /login`: Log in and return JWT token. Sets cookie.
-- `POST /logout`: Clear cookies and end session.
-- `GET /me`: Return current user profile information.
-- `GET /members`: Return a list of all registered team members (Manager role required).
+```text
+http://localhost:5000
+```
 
-### 📂 Projects (`/api/projects`)
-- `GET /`: Retrieve all projects.
-- `POST /`: Create a new project (Manager role required).
-- `PUT /:id`: Update project details (Manager role required).
-- `DELETE /:id`: Archive/Delete project (Manager role required).
+You can verify it with:
 
-### 📝 Reports (`/api/reports`)
-- `GET /`: List weekly reports. (Members only see their own; Managers see all). Supports filters: `?week=...&project=...&member=...&status=...&search=...`
-- `GET /:id`: Fetch a single report details.
-- `POST /`: Submit or save draft weekly report.
-- `PUT /:id`: Update report details. (Members cannot modify Approved reports).
-- `DELETE /:id`: Delete report (Draft status only).
+```bash
+curl http://localhost:5000/api/health
+```
 
-### 📊 Dashboard & AI (`/api/dashboard`)
-- `GET /summary`: Returns cards summary metrics.
-- `GET /charts`: Returns aggregated counts formatted for Recharts charts and recent activity lists.
-- `POST /ai`: Submits queries to the OpenAI summary service (Manager role required).
+## 4. Running the Database
 
----
+### Option A: Local MongoDB
 
-## ☁️ Deployment Ready
+Install and start MongoDB locally, then use:
 
-### Backend (Render)
-1. Commit the repository to GitHub.
-2. Create a new Web Service on Render linking the repo.
-3. Configure settings:
-   - Root Directory: `backend`
-   - Build Command: `npm install`
-   - Start Command: `node server.js`
-4. Register environment variables in Render Dashboard (`MONGODB_URI`, `JWT_SECRET`, `CLIENT_URL` pointing to frontend domain, `OPENAI_API_KEY`).
+```bash
+mongod
+```
 
-### Frontend (Vercel)
-1. Open the Vercel dashboard and Import Project.
-2. Select repository and set parameters:
-   - Root Directory: `frontend`
-   - Framework Preset: `Vite`
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-3. Click Deploy.
+Set your connection string in backend/.env:
+
+```env
+MONGODB_URI=mongodb://localhost:27017/teampulse
+```
+
+### Option B: MongoDB Atlas
+
+Use your Atlas connection string in backend/.env:
+
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority
+```
+
+> If your password contains special characters like &, encode them as %26.
+
+## Environment Variables
+
+Create a file named backend/.env and add values like:
+
+```env
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/teampulse
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRE=30d
+JWT_COOKIE_EXPIRE=30
+CLIENT_URL=http://localhost:5173
+OPENAI_API_KEY=your_openai_api_key_here
+NODE_ENV=development
+```
+
+## Seed Demo Data
+
+Populate the database with demo accounts and sample reports:
+
+```bash
+cd backend
+npm run seed
+```
+
+## Demo Login
+
+Use these demo credentials:
+
+- Manager: manager@teampulse.com / password123
+- Team Member: john@teampulse.com / password123
+
+## Deployment
+
+### Render (Backend)
+
+- Root Directory: backend
+- Build Command: npm install
+- Start Command: node server.js
+
+Required environment variables on Render:
+
+- MONGODB_URI
+- JWT_SECRET
+- CLIENT_URL
+- OPENAI_API_KEY (optional for AI features)
+- NODE_ENV=production
+
+### Vercel (Frontend)
+
+- Root Directory: frontend
+- Framework Preset: Vite
+- Build Command: npm run build
+- Output Directory: dist
+
+Required environment variable on Vercel:
+
+- VITE_API_URL=https://weekly-report-generator-fpxu.onrender.com
+
