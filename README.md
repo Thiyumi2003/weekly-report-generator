@@ -72,29 +72,29 @@ TeamPulse is a production-ready MERN stack application for managing weekly emplo
 <table>
   <tr>
     <td align="center">
-      <img src="./screenshots/team%20memeber/member-dashboard.png" alt="Team member dashboard" width="320" /><br />
+      <img src="./screenshots/team memeber/member-dashboard.png" alt="Team member dashboard" width="320" /><br />
       <b>Team member dashboard</b>
     </td>
     <td align="center">
-      <img src="./screenshots/team%20memeber/create-report.png" alt="Create report" width="320" /><br />
+      <img src="./screenshots/team memeber/create-report.png" alt="Create report" width="320" /><br />
       <b>Create report</b>
     </td>
     <td align="center">
-      <img src="./screenshots/team%20memeber/my-reports.png" alt="My reports" width="320" /><br />
+      <img src="./screenshots/team memeber/my-reports.png" alt="My reports" width="320" /><br />
       <b>My reports</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="./screenshots/team%20memeber/projects-member.png" alt="Projects" width="320" /><br />
+      <img src="./screenshots/team memeber/projects-member.png" alt="Projects" width="320" /><br />
       <b>Projects</b>
     </td>
     <td align="center">
-      <img src="./screenshots/team%20memeber/analytics-member.png" alt="Analytics" width="320" /><br />
+      <img src="./screenshots/team memeber/analytics-member.png" alt="Analytics" width="320" /><br />
       <b>Analytics</b>
     </td>
     <td align="center">
-      <img src="./screenshots/team%20memeber/member-profile.png" alt="Team member profile" width="320" /><br />
+      <img src="./screenshots/team memeber/member-profile.png" alt="Team member profile" width="320" /><br />
       <b>Team member profile</b>
     </td>
   </tr>
