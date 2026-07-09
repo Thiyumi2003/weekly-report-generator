@@ -11,24 +11,94 @@ TeamPulse is a production-ready MERN stack application for managing weekly emplo
 
 ### General Views
 
-| | | |
-|---|---|---|
-| ![Home page](./screenshots/home.png) | ![Login page](./screenshots/login.png) | ![Register page](./screenshots/register.png) |
+<table>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/home.png" alt="Home page" width="320" /><br />
+      <b>Home page</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/login.png" alt="Login page" width="320" /><br />
+      <b>Login page</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/register.png" alt="Register page" width="320" /><br />
+      <b>Register page</b>
+    </td>
+  </tr>
+</table>
 
 ### Manager Role
 
-| | | |
-|---|---|---|
-| ![Manager dashboard](./screenshots/manager/manger%20dashboard.png) | ![Manage panel](./screenshots/manager/manage%20panel.png) | ![Create projects](./screenshots/manager/create%20projects.png) |
-| ![Projects](./screenshots/manager/projects.png) | ![Analytics](./screenshots/manager/analytics.png) | ![AI assistant](./screenshots/manager/AI%20assistant.png) |
-| ![Manager profile](./screenshots/manager/manager%20profile.png) |  |  |
+<table>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/manager/manger%20dashboard.png" alt="Manager dashboard" width="320" /><br />
+      <b>Manager dashboard</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/manager/manage%20panel.png" alt="Manage panel" width="320" /><br />
+      <b>Manage panel</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/manager/create%20projects.png" alt="Create projects" width="320" /><br />
+      <b>Create projects</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/manager/projects.png" alt="Projects" width="320" /><br />
+      <b>Projects</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/manager/analytics.png" alt="Analytics" width="320" /><br />
+      <b>Analytics</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/manager/AI%20assistant.png" alt="AI assistant" width="320" /><br />
+      <b>AI assistant</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/manager/manager%20profile.png" alt="Manager profile" width="320" /><br />
+      <b>Manager profile</b>
+    </td>
+  </tr>
+</table>
 
 ### Team Member Role
 
-| | | |
-|---|---|---|
-| ![Team member dashboard](./screenshots/team%20memeber/member%20dashboard.png) | ![Create report](./screenshots/team%20memeber/create%20report.png) | ![My reports](./screenshots/team%20memeber/myreports.png) |
-| ![Projects](./screenshots/team%20memeber/projects.png) | ![Analytics](./screenshots/team%20memeber/analytics.png) | ![Team member profile](./screenshots/team%20memeber/member%20profile.png) |
+<table>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/team%20memeber/member%20dashboard.png" alt="Team member dashboard" width="320" /><br />
+      <b>Team member dashboard</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/team%20memeber/create%20report.png" alt="Create report" width="320" /><br />
+      <b>Create report</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/team%20memeber/myreports.png" alt="My reports" width="320" /><br />
+      <b>My reports</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./screenshots/team%20memeber/projects.png" alt="Projects" width="320" /><br />
+      <b>Projects</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/team%20memeber/analytics.png" alt="Analytics" width="320" /><br />
+      <b>Analytics</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/team%20memeber/member%20profile.png" alt="Team member profile" width="320" /><br />
+      <b>Team member profile</b>
+    </td>
+  </tr>
+</table>
 
 ## Features
 
