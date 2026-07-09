@@ -9,8 +9,18 @@ const getApiBaseUrl = () => {
   return '/api';
 };
 
+const normalizeBaseUrl = (baseUrl) => {
+  if (!baseUrl) return '/api';
+
+  if (baseUrl.startsWith('http://') || baseUrl.startsWith('https://')) {
+    return baseUrl.replace(/\/$/, '');
+  }
+
+  return baseUrl.startsWith('/') ? baseUrl : `/${baseUrl}`;
+};
+
 const api = axios.create({
-  baseURL: getApiBaseUrl(),
+  baseURL: normalizeBaseUrl(getApiBaseUrl()),
   headers: {
     'Content-Type': 'application/json'
   },
