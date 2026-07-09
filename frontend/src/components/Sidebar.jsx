@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import logoImage from '../images/logo.png';
 import { 
   FiHome, 
   FiFileText, 
@@ -50,9 +51,11 @@ const Sidebar = ({ isOpen, onClose }) => {
           {/* Sidebar Header */}
           <div className="h-16 flex items-center justify-between px-6 border-b border-slate-900">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                <span className="font-extrabold text-white text-lg">T</span>
-              </div>
+              <img
+                src={logoImage}
+                alt="TeamPulse logo"
+                className="w-8 h-8 rounded-lg object-cover shadow-lg shadow-indigo-500/20"
+              />
               <span className="text-xl font-bold tracking-tight text-white font-serif bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
                 TeamPulse
               </span>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { FiCheckCircle, FiTrendingUp, FiCpu, FiArrowRight } from 'react-icons/fi';
+import logoImage from '../images/logo.png';
 
 const Home = () => {
   const { user } = useAuth();
@@ -20,9 +21,11 @@ const Home = () => {
       {/* Top Navigation Row */}
       <header className="max-w-7xl w-full mx-auto px-6 h-20 flex items-center justify-between z-10">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <span className="font-extrabold text-white text-lg">T</span>
-          </div>
+          <img
+            src={logoImage}
+            alt="TeamPulse logo"
+            className="w-8 h-8 rounded-lg object-cover shadow-lg shadow-indigo-500/20"
+          />
           <span className="text-xl font-bold tracking-tight font-serif bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
             TeamPulse
           </span>

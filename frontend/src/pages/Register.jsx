@@ -6,6 +6,7 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import { FiAlertTriangle, FiHome } from 'react-icons/fi';
+import logoImage from '../images/logo.png';
 
 const Register = () => {
   const { register: authRegister } = useAuth();
@@ -54,9 +55,11 @@ const Register = () => {
 
       {/* Header Logo */}
       <div className="flex items-center gap-2.5 mb-8">
-        <div className="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-          <span className="font-extrabold text-white text-xl">T</span>
-        </div>
+        <img
+          src={logoImage}
+          alt="TeamPulse logo"
+          className="w-9 h-9 rounded-lg object-cover shadow-lg shadow-indigo-500/20"
+        />
         <span className="text-2xl font-bold tracking-tight text-white font-serif">
           TeamPulse
         </span>
