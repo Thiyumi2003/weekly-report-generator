@@ -13,9 +13,13 @@ TeamPulse is a production-ready MERN stack application for managing weekly emplo
 |---|---|---|
 | ![Home View](screenshots/home.png) | ![Login View](screenshots/login.png) | ![Register View](screenshots/register.png) |
 
-| Manager Dashboard View | Team Member View |
-|---|---|
-| ![Manager Dashboard](screenshots/manager/manager.png) | ![Team Member View](screenshots/team%20memeber/team%20member.png) |
+| Manager Dashboard | Manager Profile | AI Assistant |
+|---|---|---|
+| ![Manager Dashboard](screenshots/manager/manger%20dashboard.png) | ![Manager Profile](screenshots/manager/manager%20profile.png) | ![AI Assistant](screenshots/manager/AI%20assistant.png) |
+
+| Team Member Dashboard | Team Member Profile | Create Report |
+|---|---|---|
+| ![Team Member Dashboard](screenshots/team%20memeber/member%20dashboard.png) | ![Team Member Profile](screenshots/team%20memeber/member%20profile.png) | ![Create Report](screenshots/team%20memeber/create%20report.png) |
 
 ## Features
 
@@ -125,22 +129,6 @@ CLIENT_URL=http://localhost:5173
 OPENAI_API_KEY=your_openai_api_key_here
 NODE_ENV=development
 ```
-
-## Seed Demo Data
-
-Populate the database with demo accounts and sample reports:
-
-```bash
-cd backend
-npm run seed
-```
-
-## Demo Login
-
-Use these demo credentials:
-
-- Manager: manager@teampulse.com / password123
-- Team Member: john@teampulse.com / password123
 
 ## Deployment
 
